@@ -2,7 +2,8 @@
 
 class Connector
 {
-	public $inputFile;
+	public $inputFile, $outputFile;
+	public $dbHost, $dbName, $dbLogin;
 
 	public function exportToFlexibee()
 	{
@@ -10,7 +11,11 @@ class Connector
 	}
 	public function test()
 	{
-		echo 'test<br>';
-		echo $this->inputFile;
+		echo 'TEST<br>';
+		echo 'vstupni soubor: '.$this->inputFile.'<br>';
+		echo 'vystupni soubor: '.$this->outputFile.'<br>';
+		echo 'HOST: '.$this->dbHost.'<br>';
+		echo 'Název databáze: '.$this->dbName.'<br>';
+		echo 'Login: '.$this->dbLogin.'<br>';
 	}
 }
